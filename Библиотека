@@ -23,7 +23,7 @@ def contour(line_edit) :
     image_name = line_edit.text()
     with Image.open(image_name) as variable:
      COUNTUR_image = variable.filter(ImageFilter.CONTOUR)
-     CONTOUR_image.show()
+     COUNTUR_image.show()
 def emboss(line_edit):
     image_name = line_edit.text()
     with Image.open(image_name) as variable:
@@ -34,3 +34,9 @@ def flip(line_edit):
     with Image.open(image_name) as variable:
         FLIP_image = variable.transpose(Image.FLIP_LEFT_RIGHT)
         PLIP_image.show()
+def rotate(line_edit):
+    image_name = line_edit.text()
+    with Image.open(image_name) as variable:
+        ROTATE_image = variable.transpose(Image.ROTATE_180)
+        ROTATE_image.show()
+
